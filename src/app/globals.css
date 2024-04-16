@@ -1,0 +1,164 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import '../styles/style.css';
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../asset/PlusJakartaSans/PlusJakartaSans-Regular.woff2') format('woff2'),
+      url('../asset/PlusJakartaSans/PlusJakartaSans-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../asset/PlusJakartaSans/PlusJakartaSans-Bold.woff2') format('woff2'),
+      url('../asset/PlusJakartaSans/PlusJakartaSans-Bold.woff') format('woff');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../asset/PlusJakartaSans/PlusJakartaSans-SemiBold.woff2') format('woff2'),
+      url('../asset/PlusJakartaSans/PlusJakartaSans-SemiBold.woff') format('woff');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../asset/PlusJakartaSans/PlusJakartaSans-Light.woff2') format('woff2'),
+      url('../asset/PlusJakartaSans/PlusJakartaSans-Light.woff') format('woff');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Plus Jakarta Sans';
+  src: url('../asset/PlusJakartaSans/PlusJakartaSans-Medium.woff2') format('woff2'),
+      url('../asset/PlusJakartaSans/PlusJakartaSans-Medium.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'PhosphateSolid';
+  src: url('../asset/PhosphateSolid/PhosphateSolid.woff2') format('woff2'),
+      url('../asset/PhosphateSolid/PhosphateSolid.woff') format('woff');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'PT Serif';
+  src: url('../asset/PTSerif/PTSerif-Regular.woff2') format('woff2'),
+      url('../asset/PTSerif/PTSerif-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+
+h1,h2{
+  font-family: 'PhosphateSolid';
+  font-style: normal;
+}
+h1{
+  @apply md:text-[4.875rem] text-[2.875rem] leading-[4.875rem] font-medium text-[#1E2225];
+}
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+body {
+  font-size: 1rem;
+  overflow-x: hidden;
+  font-family: 'Plus Jakarta Sans';
+  font-weight: 400;
+  -webkit-text-size-adjust: 100%;
+}
+button,
+input,
+textarea,
+select,
+a,
+svg {
+  font-family: 'Plus Jakarta Sans';
+  font-style: normal;
+}
+textarea, input[type="text"], input[type="number"], input[type="email"], input[type="tel"], select {
+  display:block;
+  border:none;
+  outline:none;
+  font-size:1rem;
+  line-height:1.125rem;
+  font-family: 'Plus Jakarta Sans';
+  font-weight:400;
+  border:1px solid #CCD7E1;
+  color:#000;
+  margin:0;
+  border-radius: 0.375rem;
+  width:100%;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.container{
+  @apply w-full max-w-[74.625rem] my-0 mx-auto py-0 sm:px-7 px-5;
+}
+.btn{
+  @apply inline-block font-semibold text-grey bg-secondary uppercase text-base sm:text-14 md:px-8 px-4 py-3 border-2 border-solid border-transparent rounded-full transition-[0.5s] duration-[all];
+}
+.btn_coder{
+  @apply text-white bg-grey uppercase text-base sm:text-14 md:px-8 px-4 py-3 border-2 border-solid border-transparent rounded-full transition-[0.5s] duration-[all];
+}
+.btn_coder:hover{
+  @apply bg-white border-2 border-solid border-grey text-grey;
+}
+.btn:hover{
+  @apply bg-white border-2 border-solid border-secondary;
+}
+.btn_started_box{
+  @apply inline-block text-18 font-medium text-primary py-8;
+}
+.w_f{
+  @apply w-full;
+}
+.m_icon{
+  @apply inline-block h-10 w-10 bg-no-repeat bg-contain object-contain bg-center;
+}
