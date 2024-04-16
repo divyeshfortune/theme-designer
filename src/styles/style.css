@@ -147,7 +147,7 @@ nav.menu{
 
 	/**Dropdown Menu start**/
 	.menu ul li ul {
-		position: static;
+		position: absolute;
 		opacity: 1;
 		width: 100%;
 		pointer-events: auto;
@@ -184,11 +184,11 @@ nav.menu{
 	}
 
 	.menu ul li.subnav-open:after {
-		opacity: 0;
+		@apply opacity-0;
 	}
 
-	.menu ul li.subnav-open ul {
-		display: block;
+	.menu ul li ul.subnav-open {
+		@apply block;
 	}
 
 	/**Dropdown Menu end**/

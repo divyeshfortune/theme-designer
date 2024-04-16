@@ -13,7 +13,7 @@ const Header = () => {
   const toggleSubmenu = (event) => {
     const submenu = event.currentTarget.querySelector(".subnav");
     submenu.classList.toggle("subnav-open");
-  };
+  };  
 
   return (
     <header className={`header-scn ${isMenuOpen ? "menu-open" : ""}`}>
@@ -39,9 +39,9 @@ const Header = () => {
               <li>
                 <Link href="#">Components</Link>
               </li>
-              <li className="dropdown">
+              <li className="dropdown" onClick={toggleSubmenu}>
                 <Link href="#">Coded</Link>
-                <ul>
+                <ul className="subnav">
                   <li>
                     <Link href="#">Company 1</Link>
                   </li>
