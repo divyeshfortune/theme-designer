@@ -183,7 +183,7 @@ nav.menu{
 		transition: 0.5s all;
 	}
 
-	.menu ul li.subnav-open:after {
+	.menu ul li.dropdown::after .subnav-open {
 		@apply opacity-0;
 	}
 
@@ -198,7 +198,7 @@ nav.menu{
 }
 
 #searchQueryInput {
-	@apply w-full h-[2.8rem] bg-gray-200 outline-0 border-0 rounded-[1.625rem] text-base pl-14 pr-10;
+	@apply w-full h-[2.8rem] outline-0 border border-solid border-[#5F707D] rounded-[1.625rem] text-base pl-14 pr-10;
 }
 
 #searchQuerySubmit {
@@ -241,7 +241,7 @@ nav.menu{
 }
 
 .prod_box {
-	@apply grid md:grid-cols-12 grid-cols-1 place-items-center gap-4;
+	@apply grid md:grid-cols-12 grid-cols-1 place-items-center gap-[1.875rem];
 }
 
 .prod_box a {
